@@ -1,143 +1,100 @@
-/*1. Повторите поведение страницы по данному образцу. Координаты должны меняться и зависеть от положения курсора мыши на в области
-X:295 Y:3
-*/
+/* 1. Написать функцию makeCalculator, которая принимает число x и возвращает функцию, которая возвращает произведение x на 2. */
 
-
-let pAxis = document.querySelector('.axic');
-
-// pAxis.addEventListener('mousemove', (event) => {
-//   pAxis.innerText = `X: ${event.x} Y: ${event.y}`;
-//   console.log(event);
-// });
-
-pAxis.onmousemove = (event) => pAxis.innerText = `X: ${event.x} Y: ${event.y}`;
-
-
-
-/* 2. Повторите поведение страницы по данному образцу. При нажатии на область, красный квадрат его верхний левый угол доложен поместиться в ту координату, на которую вы нажали*/
-
-let div = document.querySelector('div');
-
-document.querySelector('body').addEventListener('click', (event) => {
-  div.style.position = 'absolute';
-  div.style.top = `${event.y}px`;
-  div.style.left = `${event.x}px`;
-  div.style.transition = '.2s'
-  // console.log(event.x);
-});
-
-
-
-
-/* 2. Повторите поведение страницы по данному образцу. При нажатии на область, красный квадрат его верхний левый угол доложен поместиться в ту координату, на которую вы нажали*/
-
-let div = document.querySelector('div');
-
-document.querySelector('body').addEventListener('click', (event) => {
-  div.style.position = 'absolute';
-  div.style.top = `${event.y}px`;
-  div.style.left = `${event.x}px`;
-  div.style.transition = '.2s'
-  // console.log(event.x);
-});
-
-
-
-/* 4. Создайте инпут который будет выводить код последнего элемента введенного в инпут  */
-
-
-let input = document.querySelector('input');
-
-let p = document.querySelector('p');
-
-let text = 'Код нажатой клавиши: '
-
-input.onkeydown = (event) => p.innerText = `${text}${event.keyCode}`;
-
-
-
-/* 5. Создайте инпут который будет выводить последний элемент введенный в инпут */
-
-let input = document.querySelector('input');
-
-let p = document.querySelector('p');
-
-let text = 'Нажатая клавиша: ';
-
-input.onkeydown = (event) => p.innerText = text + event.key;
-
-
-
-/* 6. Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl.
-(event.keyCode === 17) */
-
-
-let div = document.querySelector('div');
-
-// document.addEventListener('keydown', (event) => {
-//   if (event.keyCode === 17) {
-//     div.addEventListener('click', () => {
-//       div.style.backgroundColor = 'red';
-//     });
-//   }
-// });
-
-document.onkeydown = (event) => {
-  if (event.keyCode === 17) {
-    div.onclick = () => div.style.backgroundColor = 'red';
-  };
+function makeCalculator(x) {
+  let result = function() {
+    return x * 2;
+  }
+  return result;
 };
 
+let calculator = makeCalculator(3);
+
+console.log(calculator());
 
 
+/* 2. Написать функцию makeCounter, которая возвращает функцию, внутри которой увеличивается сохраненный каким-то образом ранее счетчик.
+Т.е. работать она должна так:
+*/
 
-/* 7. Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'. */
-
-let div = document.getElementById('colorContainer');
-
-div.innerText = 'hi';
-
-div.style.display = 'flex';
-div.style.alignItems = 'center';
-div.style.justifyContent = 'center';
-div.style.fontSize = '24px';
-
-document.onkeydown = (event) => {
-  if (event.keyCode === 17) {
-    div.onclick = () => div.innerText = 1;
-  } else if (event.keyCode === 18) {
-    div.onclick = () => div.innerText = 2;
-  }  else if (event.keyCode === 16) {
-    div.onclick = () => div.innerText = 3;
+function makeCounter() {
+  let result = 0;
+  resultCount = function() {
+    return result++;
   }
-}
+  return resultCount;
+};
 
-// document.onkeydown = (event) => console.log(event.keyCode);
-//
-//
-//
-// /* 8. Создайте кнопку и элемент. При нажатии на кнопку, будет скрываться элемент */
+let counter = makeCounter();
+let counter2 = makeCounter();
 
-let hidingButton = document.querySelector('input');
+console.log(counter());
+console.log(counter());
+console.log(counter());
 
-let hiddenElem = document.querySelector('div');
-
-hidingButton.addEventListener('click', () => hiddenElem.style.display = 'none');
-
-
+console.log(counter2());
+console.log(counter2());
+console.log(counter2());
 
 
-/* 9. Создайте раскрывающееся меню */
 
-let divTriangle = document.getElementById('triangle');
 
-let li = document.body.children[0].children[1].children;
+/* 3. Написать функцию startsWith, которая принимает 2 строки и проверяет, начинается ли первая строка с символов второй строки. Функция возвращает true или false. */
 
-// console.log(li);
 
-divTriangle.addEventListener('click', () => {
-  divTriangle.style.transform = 'rotate(136deg)';
-  for (let key of li) {
-    key.style.display = 'block'
-  };
+function startsWith (str1, str2) {
+  arr1 = str1.split('');
+  arr2 = str2.split('');
+
+  if (arr1[0] === arr2.find((key) => key === arr1[0])) {
+    return true
+  } else { return false };
+};
+
+console.log(startsWith('hi', 'ttt'));
+console.log(startsWith('hi', 'ho'));
+console.log(startsWith('ttt', 'hi'));
+console.log(startsWith('hi', 'oh'));
+console.log(startsWith('hi', 'asashasas'));
+
+
+
+
+/* 4* Реализовать функционал модального окошка, которое открывается с затемнением фона при нажатии на кнопку и закрывается по нажатию на кнопку-крестик или на тёмную область вокруг окошка.
+ПОСЛЕДОВАТЕЛЬНОСТЬ РАБОТЫ:
+1) HTML, CSS
+Посмотрите видео, как подготовить верстку:https://youtu.be/Zs-DMTCKYlI
+2) JS
+- Соберите в переменные необходимые элементы: кнопку для открытия окошка, само окошко вместе с фоном, окошко без фона, кнопку закрытия окошка.
+- Повесьте обработчик клика на кнопку открытия - к окошку должен добавляться класс, в котором через CSS задана видимость блока.
+Чтобы добавить класс к DOM-элементу, используется метод *element.classList.add('classname')*
+- Повесьте обработчик клика на кнопку закрытия окошка - при этом должен удаляться класс, который добавляли в предыдущем обработчике.Чтобы удалить класс из DOM-элемента, используется метод *element.classList.remove('classname')*
+- Повесьте обработчик клика на глобальный объект window, чтобы реализовать закрытие окошка по клику на тёмную область. Т.к. эта область является "оболочкой" окошка, мы должны проверить, была ли именно эта область целью клика (не центральная, основная часть окошка, а именно тёмная).
+Для обращения к элементу, на который пришелся клик, можно использовать метод
+*e.target* (e - это параметр функции-обработчика события, и его свойство target точно вказывает на тот элемент, на который кликнул пользователь). */
+
+
+let btnCall = document.getElementById('btnCall');
+console.log(btnCall);
+
+let popup = document.getElementById('popup');
+console.log(popup);
+
+let contentPopup = document.getElementById('contentPopup');
+console.log(contentPopup);
+
+
+let btnPopup = document.getElementById('btnPopup');
+console.log(btnPopup);
+
+btnCall.addEventListener('click', () => {
+  popup.classList.add('open');
+});
+
+btnPopup.onclick = () => {
+  popup.classList.remove('open');
+};
+
+window.addEventListener('click', (even) => {
+  if (even.target === popup)
+  popup.classList.remove('open');
 });
