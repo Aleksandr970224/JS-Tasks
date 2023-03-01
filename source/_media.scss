@@ -1,0 +1,144 @@
+@media (min-width: 766px) {
+  .container {
+    padding: 0 60px;
+  }
+
+  #rightNav {
+
+    ul {
+      display: none;
+    }
+
+    #hamburgerMenu {
+      display: block;
+      content: url('../images/title/hamburger_white.svg');
+      margin-left: 20px;
+
+      &:hover {
+        content: url('../images/title/hamburger_gold_hover.svg');
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+  .titleContent {
+    margin-top: 78px;
+    margin-left: 0;
+
+    h1 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 64px;
+    }
+
+    p {
+      line-height: 24px;
+      max-width: 390px;
+      margin: 20px 0 60px;
+    }
+  }
+
+
+  .wrapperTextMainPortfolio {
+    max-width: 365px;
+    margin: 0 auto;
+
+    hr {
+      width: 90px;
+    }
+
+    .textMainPortfolio {
+      padding-top: 50px;
+      color: $colorGold;
+      font-size: 32px;
+    }
+  }
+
+
+  .buttonsPortfolio {
+    flex-wrap: wrap;
+    max-width: 445px;
+
+    button {
+      margin-bottom: 5px;
+    }
+  }
+
+
+
+  .wrapperImages {
+    grid-template-columns: 450px;
+    grid-template-rows: 560px;
+  }
+}
+
+
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  #rightNav {
+
+    ul {
+      display: block;
+    }
+
+    #hamburgerMenu {
+      display: none;
+    }
+  }
+
+
+  .titleContent {
+    margin-top: 160px;
+    margin-left: 60px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 120px;
+    }
+
+    p {
+      line-height: 40px;
+      max-width: 470px;
+      margin: 10px 0 25px;
+    }
+  }
+
+
+  .wrapperTextMainPortfolio {
+    max-width: 700px;
+    margin: 0 auto;
+
+    hr {
+      width: 240px;
+    }
+
+    .textMainPortfolio {
+      padding-top: 100px;
+      color: $colorGold;
+      font-size: 40px;
+    }
+  }
+
+
+  .buttonsPortfolio {
+    flex-wrap: no-wrap;
+    max-width: 895px;
+
+    button {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .wrapperImages {
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(2, 560px);
+  }
+}
