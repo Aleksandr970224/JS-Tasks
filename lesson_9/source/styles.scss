@@ -1,0 +1,637 @@
+// @import 'media.scss'; не подключается???
+@import 'reset.scss';
+
+$colorDark: #000;
+$colorGold: #bdae82;
+$colorWhite: #fff;
+
+.title {
+  background-image: url(../images/title/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0 20px;
+
+  #navTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+}
+
+#leftNav {
+  width: 50px;
+  height: 50px;
+  content: url(../images/title/logo.svg);
+
+  &:hover {
+    content: url(../images/title/logoGold.svg);
+    cursor: pointer;
+    transition: .2s; // НЕ РАБОТАЕТ?????
+  }
+}
+
+
+
+#rightNav {
+  display: flex;
+  align-items: center;
+
+  ul {
+
+    li {
+      display: inline-block;
+
+      a {
+        color: $colorWhite;
+        text-decoration: none;
+        margin-right: 30px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 50px;
+
+        &:hover {
+          color: $colorGold;
+          transition: .2s;
+        }
+      }
+    }
+  }
+
+
+  p {
+    &:first-of-type {
+      color: $colorGold;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 50px;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    &:nth-of-type(2) {
+      color: $colorWhite;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 50px;
+    }
+  }
+
+  p {
+    &:last-of-type {
+      color: $colorWhite;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 50px;
+      cursor: pointer;
+    }
+  }
+
+  #hamburgerMenu {
+    display: none;
+    transition: .3s;
+  }
+}
+
+
+.titleContent {
+  margin-top: 160px;
+  max-width: 500px;
+  margin-left: 60px;
+
+  h1 {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 120px;
+    color: $colorWhite;
+  }
+
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: $colorWhite;
+    margin: 10px 0 25px;
+    max-width: 470px;
+  }
+
+  button {
+    padding: 8px 72px;
+    background-color: $colorGold;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: $colorDark;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &:hover {
+      color: $colorWhite;
+      transition: .2s;
+    }
+  }
+}
+
+
+
+.portfolio {
+  background-color: $colorDark;
+}
+
+.textMainPortfolio {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 80px;
+  color: $colorGold;
+  padding-top: 100px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+hr {
+  display: inline-block;
+  border: 1px solid $colorGold;
+  width: 240px;
+  margin-bottom: 10px;
+}
+
+.buttonsPortfolio {
+  margin: 0 auto;
+  max-width: 895px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: $colorGold;
+    padding: 8px 0;
+    min-width: 220px;
+    text-align: center;
+    background-color: $colorDark;
+    border: 2px solid $colorGold;
+    max-width: 220px;
+    transition: .3s;
+
+    &:hover {
+      cursor: pointer;
+      color: $colorWhite;
+    }
+
+    &:focus {
+      background-color: $colorGold;
+      color: $colorDark;
+    }
+  }
+}
+
+.wrapperImages {
+  margin-top: 60px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  grid-gap: 25px;
+  grid-template-rows: repeat(2, 560px);
+  justify-content: center;
+  align-items: center;
+
+  // .testImg {
+  //       width: 50%;
+  //       height: 80%;
+  //     }
+}
+
+.wrapperBigImg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c5;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // opacity: 0;
+  // visibility: hidden;
+  transition: .3s;
+  margin-top: 0;
+
+  .testImg {
+    width: 50%;
+    height: 80%;
+
+  }
+}
+
+.wrapperBigImgOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.wrapperContact {
+  // min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.701);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contentContact {
+  min-width: 450px;
+
+  .textContact {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: $colorGold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    #containerEmail {
+      color: $colorGold;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      margin: 40px 0 20px;
+      width: 100%;
+      border: 2px solid $colorGold;
+
+      #email {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: $colorGold;
+        width: 100%;
+        padding-left: 20px;
+
+        &::placeholder {
+          color: $colorGold;
+        }
+      }
+    }
+
+    #containerTel {
+      color: $colorGold;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      margin-bottom: 20px;
+      width: 100%;
+      border: 2px solid $colorGold;
+
+      #tel {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: $colorGold;
+        width: 100%;
+        padding-left: 20px;
+
+        &::placeholder {
+          color: $colorGold;
+        }
+      }
+    }
+
+    #containerMessage {
+      color: $colorGold;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      width: 100%;
+      border: 2px solid $colorGold;
+
+      #message {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: $colorGold;
+        width: 100%;
+        padding-left: 20px;
+        padding-bottom: 56px;
+
+        &::placeholder {
+          color: $colorGold;
+        }
+      }
+    }
+
+    #btnSubmit {
+      max-width: 220px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      color: $colorDark;
+      background-color: $colorGold;
+      padding: 8px 40px;
+      border: none;
+      margin-top: 38px;
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        color: $colorWhite;
+      }
+    }
+  }
+}
+
+
+
+
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000c5;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+
+  .closeBurgerMenu {
+    content: url('../images/title/hamburger_close_white.svg');
+    position: absolute;
+    top: 20px;
+    right: 64px;
+    z-index: 999;
+
+    &:hover {
+      content: url('../images/title/hamburger_close_gold_hover.svg');
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #000;
+
+    li {
+      list-style: none;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 73px;
+      margin-left: 127px;
+      margin-bottom: 16px;
+      // margin-top: 134px;
+
+      &:first-of-type {
+        margin-top: 134px;
+      }
+
+      a {
+        color: $colorWhite;
+        text-decoration: none;
+        transition: .3s;
+
+        &:hover {
+          color: $colorGold;
+        }
+      }
+    }
+  }
+}
+
+.burgerMenuOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.wrapperImagesBig {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+
+  img {
+    width: 60%;
+    height: 80%;
+  }
+}
+
+.wrapperImagesBigOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+@media (min-width: 766px) {
+  .container {
+    padding: 0 60px;
+  }
+
+  #rightNav {
+
+    ul {
+      display: none;
+    }
+
+    #hamburgerMenu {
+      display: block;
+      content: url('../images/title/hamburger_white.svg');
+      margin-left: 20px;
+
+      &:hover {
+        content: url('../images/title/hamburger_gold_hover.svg');
+        cursor: pointer;
+      }
+    }
+  }
+
+
+
+  .titleContent {
+    margin-top: 78px;
+    margin-left: 0;
+
+    h1 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 64px;
+    }
+
+    p {
+      line-height: 24px;
+      max-width: 390px;
+      margin: 20px 0 60px;
+    }
+  }
+
+
+  .wrapperTextMainPortfolio {
+    max-width: 365px;
+    margin: 0 auto;
+
+    hr {
+      width: 90px;
+    }
+
+    .textMainPortfolio {
+      padding-top: 50px;
+      color: $colorGold;
+      font-size: 32px;
+    }
+  }
+
+
+  .buttonsPortfolio {
+    flex-wrap: wrap;
+    max-width: 445px;
+
+    button {
+      margin-bottom: 5px;
+    }
+  }
+
+
+
+  .wrapperImages {
+    grid-template-columns: 450px;
+    grid-template-rows: 560px;
+  }
+}
+
+
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  #rightNav {
+
+    ul {
+      display: block;
+    }
+
+    #hamburgerMenu {
+      display: none;
+    }
+  }
+
+
+  .titleContent {
+    margin-top: 160px;
+    margin-left: 60px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 120px;
+    }
+
+    p {
+      line-height: 40px;
+      max-width: 470px;
+      margin: 10px 0 25px;
+    }
+  }
+
+
+  .wrapperTextMainPortfolio {
+    max-width: 700px;
+    margin: 0 auto;
+
+    hr {
+      width: 240px;
+    }
+
+    .textMainPortfolio {
+      padding-top: 100px;
+      color: $colorGold;
+      font-size: 40px;
+    }
+  }
+
+
+  .buttonsPortfolio {
+    flex-wrap: no-wrap;
+    max-width: 895px;
+
+    button {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .wrapperImages {
+    grid-template-columns: repeat(3, 450px);
+    grid-template-rows: repeat(2, 560px);
+  }
+}
