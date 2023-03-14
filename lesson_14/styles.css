@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* TASK_1 */
+.wrapper-tabs {
+  margin: 0 15px;
+  margin-top: 10px;
+  display: flex;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.wrapper-tabs button {
+  cursor: pointer;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  transition: all ease .3s;
+}
+
+.wrapper-tabs button:hover {
+  background-color: #ddd;
+}
+
+.wrapper-tabs button.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  margin: 0 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 6px 12px;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+
+
+
+
+/* TASK_2 */
+.wrap-white-theme {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  position: relative;
+}
+
+
+.wrap-dark-theme {
+  background-color: #000000d0;
+  color: #fff;
+}
+
+#btn-dark-theme {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  border: none;
+  outline: none;
+  transition: all ease .2s;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#btn-white-theme {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  transition: all ease .2s;
+  /* display: none; */
+  z-index: -11;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#btn-dark-theme:hover {
+  cursor: pointer;
+  background-color: #000000a1;
+}
+
+#btn-white-theme:hover {
+  cursor: pointer;
+  background-color: #d3cece;
+}
+
+.wrap-white-theme p {
+  max-width: 30%;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+/* TASK_3.1 */
+.wrapper-clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid blue;
+  border-radius: 15px;
+  width: 350px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-clock #hours {
+  color: red;
+  font-size: 40px;
+}
+
+.wrapper-clock #minutes {
+  color: blue;
+  font-size: 40px;
+}
+
+.wrapper-clock #seconds {
+  color: green;
+  font-size: 40px;
+}
+
+.wrapper-clock pre {
+  font-size: 20px;
+}
+
+
+/* TASK_3.2 */
+.wrapper-analog-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000e0;
+}
+
+.analog-clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://ucarecdn.com/90f55add-3594-476a-9c4b-b33ffbb5b2ab/clockback.png');
+  background-size: cover;
+  border: 4px solid #000000e0; 
+  box-shadow: 0 0 15px rgba(255, 255, 255, .5),
+            inset 0 0 15px rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  position: relative;
+}
+
+.analog-clock::before {
+  content: '';
+  position: absolute;
+  z-index: 111;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+
+ .arrow-hr {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+ .arrow-hr::before{
+  content: '';
+  position: absolute;
+  z-index: 11;
+  width: 8px;
+  height: 80px;
+  background-color: red;
+  border-radius: 45% 45% 0 0;
+}
+
+ .arrow-min {
+  width: 190px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.arrow-min::before {
+  content: '';
+  position: absolute;
+  z-index: 13;
+  width: 6px;
+  height: 110px;
+  background-color: #ffffffe4;
+  border-radius: 40%;
+ 
+}
+
+ .arrow-sec {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.arrow-sec::before {
+  content: '';
+  position: absolute;
+  z-index: 13;
+  width: 4px;
+  height: 130px;
+  background-color: #f7fb04e4;
+  border-radius: 50%;
+  
+}
