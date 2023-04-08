@@ -1,0 +1,79 @@
+/* .row {
+  justify-content: space-evenly;
+}
+
+#container .card {
+  padding: 0;
+}
+
+.card {
+  margin: 0 15px;
+  margin-bottom: 15px;
+}
+
+.population::before {
+  content: url('./images/family-16px.png');
+  display: inline-block;
+  margin-right: 3px;
+  max-height: 16px;
+}
+
+.language::before {
+  content: url('./images/language-16px.png');
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.currency::before {
+  content: url('./images/currency-16px.png');
+  display: inline-block;
+  margin-right: 3px;
+}*/
+/* TASK_2 */
+
+
+
+
+#container .card {
+  padding: 0;
+} 
+
+#container .card:first-of-type {
+  min-height: 550px;
+}
+
+#container .card:not(#container .card:first-of-type) {
+  max-width: 275px;
+  max-height: 420px;
+  margin-top: 60px;
+}
+
+#container .card:not(#container .card:first-of-type)::before {
+  content: 'Соседняя страна';
+  background-color: #e1e1e1;
+  padding: 3px 5px;
+}
+
+.card {
+  margin: 0 30px;
+}
+
+.population::before {
+  content: url('./images/family-16px.png');
+  display: inline-block;
+  margin-right: 3px;
+  max-height: 16px;
+}
+
+.language::before {
+  content: url('./images/language-16px.png');
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.currency::before {
+  content: url('./images/currency-16px.png');
+  display: inline-block;
+  margin-right: 3px;
+}
+/* TASK_3 */
