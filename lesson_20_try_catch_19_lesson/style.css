@@ -1,0 +1,16 @@
+body .card {
+  width: 18rem;
+}
+
+body .card-absolute {
+  position: absolute;
+  left: 400px;
+  top: 0;
+}
+
+.list-group-item:hover {
+  background-color: #0d6dfd;
+  color: #fff;
+  cursor: pointer;
+  transition: ease .3s;
+}
