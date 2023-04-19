@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color&nbsp;Generator</title>
+  <link rel="icon" href="./images/favicon.png" type="favicon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="wrapper-color-generator">
+    <div class="box-color"></div>
+    <button id="btn-random-color">Хочу рандомный цвет</button>
+    <button id="btn-random-gradient">Хочу рандомный градиент</button>
+    <form action="#" id="form-color">
+      <label for="" id="label-rgb"> RGB:
+        <input type="text" placeholder="Введите три числа..." class="input-pallete" id="rgb-input">
+        <ul id="rgb-conditions">
+          <li>Числа в диапазоне от 0 до 255.</li>
+          <li>После первых двух чисел проставляется запятая.</li>
+        </ul>
+      </label>
+      <label for="" id="label-rgba">RGBA:
+        <input type="text" id="rgba-input" class="input-pallete" placeholder="Введите четыре числа...">
+        <ul id="rgba-conditions">
+          <li>Первые три числа в диапазоне от 0 до 255.</li>
+          <li>Последнее число в диапозоне от 0.1 до 0.9</li>
+          <li>После первых трех чисел проставляется запятая.</li>
+        </ul>
+      </label>
+      <label for="" id="label-hex">HEX:
+        <input type="text" id="hex-input" class="input-pallete" placeholder="Введите значение...">
+        <ul id="hex-conditions">
+          <li>Числа в диапазоне от 0 до 9.</li>
+          <li>Буквы в диапозоне от 'a' до 'f'. Используется латиница.</li>
+          <li>Если значение повторяется, то допускается написание одного символа, вместо двух. Например, 44ff44 = 4f4.
+          </li>
+        </ul>
+      </label>
+
+      <div class="wrapper-btn-input">
+        <button id="btn-accept-input" class="btn-palette" disabled>Ок</button>
+        <button id="btn-clean-input" class="btn-palette" disabled>Очистить</button>
+      </div>
+
+      <div class="wrapper-change-color">
+        <label for="">RGB в HEX:
+          <input type="text" placeholder="Введите три числа..." id="rgb-input-send">
+          <button class="btn-change-input" disabled>Перевести</button>
+          <input type="text" id="hex-input-receiving" placeholder="">
+          <ul id="rgb-conditions-change">
+            <li>Числа в диапазоне от 0 до 255.</li>
+            <li>После первых двух чисел проставляется запятая.</li>
+          </ul>
+        </label>
+        <label for="">HEX в RGB:
+          <input type="text" id="hex-input-send" placeholder="Введите значение...">
+          <button class="btn-change-input" disabled>Перевести</button>
+          <input type="text" placeholder="" id="rgb-input-receiving">
+          <ul id="hex-conditions-change">
+            <li>Числа в диапазоне от 0 до 9.</li>
+            <li>Буквы в диапозоне от 'a' до 'f'. Используется латиница.</li>
+            <li>Если значение повторяется, то допускается написание одного символа, вместо двух. Например, 44ff44 = 4f4.
+            </li>
+          </ul>
+        </label>
+      </div>
+    </form>
+  </div>
+
+
+  <a id="author-favicon" href="https://www.flaticon.com/ru/free-icons/" title="арт иконки" target="_blank">Арт иконки от
+    Circlon Tech - Flaticon</a>
+</body>
+
+</html>

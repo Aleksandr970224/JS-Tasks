@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper-color-generator {
+  background-color: rgba(241, 128, 128, 0.299);
+}
+
+#author-favicon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.wrapper-color-generator {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-color {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+#btn-random-color {
+  margin: 30px 0 10px;
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  background-color: rgb(7, 189, 7);
+  border-radius: 15px;
+  color: #fff;
+  transition: all ease .3s;
+  font-size: 16px;
+}
+
+#btn-random-color:hover {
+  background-color: rgb(4, 150, 4);
+  cursor: pointer;
+}
+
+#btn-random-gradient {
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  background-color: rgb(28, 28, 238);
+  border-radius: 15px;
+  color: #fff;
+  transition: all ease .3s;
+  font-size: 16px;
+}
+
+#btn-random-gradient:hover {
+  background-color: rgb(5, 5, 135);
+  cursor: pointer;
+}
+
+
+#form-color {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  min-height: 250px;
+}
+
+label {
+  display: inline-block;
+  position: relative;
+  min-width: 380px;
+  min-height: 100px;
+}
+
+label:nth-child(even) {
+  margin: 0 20px;
+}
+
+
+
+
+.wrapper-btn-input {
+  min-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 50px;
+}
+
+.wrapper-btn-input button {
+  display: inline-block;
+  min-width: 70px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: all ease .3s;
+  margin-left: 10px;
+}
+
+#btn-accept-input {
+  background-color: rgb(28, 28, 238);
+  color: #fff;
+}
+
+#btn-accept-input:hover {
+  cursor: pointer;
+  background-color: rgb(5, 5, 135);
+}
+
+#btn-clean-input {
+  background-color: #fff;
+}
+
+#btn-clean-input:hover {
+  background-color: #d9d6d6;
+  cursor: pointer;
+}
+
+
+
+
+input {
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+
+#rgb-conditions {
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgb(77, 255, 0);
+  border-radius: 20px;
+  background-color: rgba(114, 234, 90, 0.552);
+}
+
+#rgb-conditions.open {
+  display: block;
+}
+
+#rgb-conditions li {
+  list-style: none;
+  padding: 5px;
+  color: #000000
+}
+
+
+
+
+#rgba-conditions {
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgb(77, 255, 0);
+  border-radius: 20px;
+  background-color: rgba(114, 234, 90, 0.552);
+}
+
+#rgba-conditions.open {
+  display: block;
+}
+
+#rgba-conditions li {
+  list-style: none;
+  padding: 5px;
+  color: #000000
+}
+
+
+
+
+
+#hex-conditions {
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgb(77, 255, 0);
+  border-radius: 20px;
+  background-color: rgba(114, 234, 90, 0.552);
+  max-width: 360px;
+}
+
+#hex-conditions.open {
+  display: block;
+}
+
+#hex-conditions li {
+  list-style: none;
+  padding: 5px;
+  color: #000000
+}
+
+
+
+
+
+.wrapper-change-color {
+  min-height: 250px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.wrapper-change-color label:nth-child(2) {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.btn-change-input {
+  padding: 5px 0;
+  background-color: rgb(28, 28, 238);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  min-width: 80px;
+  transition: all ease .3s;
+}
+
+.btn-change-input:hover {
+  cursor: pointer;
+  background-color: rgb(5, 5, 135);
+}
+
+
+#rgb-conditions-change {
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgb(77, 255, 0);
+  border-radius: 20px;
+  background-color: rgba(114, 234, 90, 0.552);
+}
+
+#rgb-conditions-change li {
+  list-style: none;
+  padding: 5px;
+  color: #000000
+}
+
+#rgb-conditions-change.open {
+  display: block;
+}
+
+
+
+#hex-conditions-change {
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgb(77, 255, 0);
+  border-radius: 20px;
+  background-color: rgba(114, 234, 90, 0.552);
+  max-width: 360px;
+}
+
+#hex-conditions-change li {
+  list-style: none;
+  padding: 5px;
+  color: #000000
+}
+
+#hex-conditions-change.open {
+  display: block;
+}
