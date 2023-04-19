@@ -76,7 +76,7 @@
 label {
   display: inline-block;
   position: relative;
-  min-width: 300px;
+  min-width: 380px;
   min-height: 100px;
 }
 
@@ -85,7 +85,17 @@ label:nth-child(even) {
 }
 
 
-#label-rgb button {
+
+
+.wrapper-btn-input {
+  min-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 50px;
+}
+
+.wrapper-btn-input button {
   display: inline-block;
   min-width: 70px;
   outline: none;
@@ -93,26 +103,30 @@ label:nth-child(even) {
   border-radius: 5px;
   padding: 5px 0;
   transition: all ease .3s;
+  margin-left: 10px;
 }
 
-#btn-accept-rgb-input {
+#btn-accept-input {
   background-color: rgb(28, 28, 238);
   color: #fff;
 }
 
-#btn-accept-rgb-input:hover {
+#btn-accept-input:hover {
   cursor: pointer;
   background-color: rgb(5, 5, 135);
 }
 
-#btn-clean-rgb-input {
+#btn-clean-input {
   background-color: #fff;
 }
 
-#btn-clean-rgb-input:hover {
+#btn-clean-input:hover {
   background-color: #d9d6d6;
   cursor: pointer;
 }
+
+
+
 
 input {
   outline: none;
@@ -123,8 +137,6 @@ input {
 
 #rgb-conditions {
   display: none;
-  /* position: absolute; */
-  /* top: 30px; */
   margin-top: 10px;
   border: 1px solid rgb(77, 255, 0);
   border-radius: 20px;
@@ -144,39 +156,8 @@ input {
 
 
 
-#label-rgba button {
-  display: inline-block;
-  min-width: 70px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 0;
-  transition: all ease .3s;
-}
-
-#btn-accept-rgba-input {
-  background-color: rgb(28, 28, 238);
-  color: #fff;
-}
-
-#btn-accept-rgba-input:hover {
-  cursor: pointer;
-  background-color: rgb(5, 5, 135);
-}
-
-#btn-clean-rgba-input {
-  background-color: #fff;
-}
-
-#btn-clean-rgba-input:hover {
-  background-color: #d9d6d6;
-  cursor: pointer;
-}
-
 #rgba-conditions {
   display: none;
-  /* position: absolute;
-  top: 30px; */
   margin-top: 10px;
   border: 1px solid rgb(77, 255, 0);
   border-radius: 20px;
@@ -196,34 +177,6 @@ input {
 
 
 
-#label-hex button {
-  display: inline-block;
-  min-width: 70px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 0;
-  transition: all ease .3s;
-}
-
-#btn-accept-hex-input {
-  background-color: rgb(28, 28, 238);
-  color: #fff;
-}
-
-#btn-accept-hex-input:hover {
-  cursor: pointer;
-  background-color: rgb(5, 5, 135);
-}
-
-#btn-clean-hex-input {
-  background-color: #fff;
-}
-
-#btn-clean-hex-input:hover {
-  background-color: #d9d6d6;
-  cursor: pointer;
-}
 
 #hex-conditions {
   display: none;

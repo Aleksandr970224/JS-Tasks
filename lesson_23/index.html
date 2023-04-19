@@ -19,8 +19,6 @@
     <form action="#" id="form-color">
       <label for="" id="label-rgb"> RGB:
         <input type="text" placeholder="Введите три числа..." class="input-pallete" id="rgb-input">
-        <button id="btn-accept-rgb-input" class="btn-palette" disabled>Ок</button>
-        <button id="btn-clean-rgb-input" class="btn-palette" disabled>Очистить</button>
         <ul id="rgb-conditions">
           <li>Числа в диапазоне от 0 до 255.</li>
           <li>После первых двух чисел проставляется запятая.</li>
@@ -28,8 +26,6 @@
       </label>
       <label for="" id="label-rgba">RGBA:
         <input type="text" id="rgba-input" class="input-pallete" placeholder="Введите четыре числа...">
-        <button id="btn-accept-rgba-input" class="btn-palette" disabled>Ок</button>
-        <button id="btn-clean-rgba-input" class="btn-palette" disabled>Очистить</button>
         <ul id="rgba-conditions">
           <li>Первые три числа в диапазоне от 0 до 255.</li>
           <li>Последнее число в диапозоне от 0.1 до 0.9</li>
@@ -38,14 +34,19 @@
       </label>
       <label for="" id="label-hex">HEX:
         <input type="text" id="hex-input" class="input-pallete" placeholder="Введите значение...">
-        <button id="btn-accept-hex-input" class="btn-palette" disabled>Ок</button>
-        <button id="btn-clean-hex-input" class="btn-palette" disabled>Очистить</button>
         <ul id="hex-conditions">
           <li>Числа в диапазоне от 0 до 9.</li>
           <li>Буквы в диапозоне от 'a' до 'f'. Используется латиница.</li>
-          <li>Если значение повторяется, то допускается написание одного символа, вместо двух. Например, 44ff44 = 4f4.</li>
+          <li>Если значение повторяется, то допускается написание одного символа, вместо двух. Например, 44ff44 = 4f4.
+          </li>
         </ul>
       </label>
+
+      <div class="wrapper-btn-input">
+        <button id="btn-accept-input" class="btn-palette" disabled>Ок</button>
+        <button id="btn-clean-input" class="btn-palette" disabled>Очистить</button>
+      </div>
+
       <div class="wrapper-change-color">
         <label for="">RGB в HEX:
           <input type="text" placeholder="Введите три числа..." id="rgb-input-send">
@@ -63,7 +64,8 @@
           <ul id="hex-conditions-change">
             <li>Числа в диапазоне от 0 до 9.</li>
             <li>Буквы в диапозоне от 'a' до 'f'. Используется латиница.</li>
-            <li>Если значение повторяется, то допускается написание одного символа, вместо двух. Например, 44ff44 = 4f4.</li>
+            <li>Если значение повторяется, то допускается написание одного символа, вместо двух. Например, 44ff44 = 4f4.
+            </li>
           </ul>
         </label>
       </div>

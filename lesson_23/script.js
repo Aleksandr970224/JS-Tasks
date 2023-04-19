@@ -31,61 +31,14 @@ btnRandomGradient.onclick = () => {
 //Кнопки для значений
 let rgbInput = document.querySelector('#rgb-input');
 let rgbConditions = document.querySelector('#rgb-conditions');
-let btnAcceptRgbInput = document.querySelector('#btn-accept-rgb-input');
-let btnCleanRgbInput = document.querySelector('#btn-clean-rgb-input');
+let btnAcceptInput = document.querySelector('#btn-accept-input');
+let btnCleanInput = document.querySelector('#btn-clean-input');
 
 let rgbaInput = document.querySelector('#rgba-input');
 let rgbaConditions = document.querySelector('#rgba-conditions');
-let btnAcceptRgbaInput = document.querySelector('#btn-accept-rgba-input');
-let btnCleanRgbaInput = document.querySelector('#btn-clean-rgba-input');
 
 let hexInput = document.querySelector('#hex-input');
 let hexConditions = document.querySelector('#hex-conditions');
-let btnAcceptHexInput = document.querySelector('#btn-accept-hex-input');
-let btnCleanHexInput = document.querySelector('#btn-clean-hex-input');//одну кнопку
-
-// let arrBtn = document.querySelectorAll('.btn-palette');
-// console.log(arrBtn);
-// arrBtn.forEach( (el) => {
-//   el.disabled = false;  
-//   el.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     el.disabled = false;
-//     // console.log(el);
-//     console.log(event.target);
-//   });
-// });
-
-// let arrInput = document.querySelectorAll('.input-pallete');
-// console.log(arrInput);
-// arrInput.forEach( (el) => {
-//   el.addEventListener('input', (event) => {
-//     if(el.id === 'rgb-input') {
-//       console.log(event.target);
-//       arrBtn.forEach( (el) => {
-//         el.disabled = false;  
-//         el.addEventListener('click', (event) => {
-//           event.preventDefault();
-//           el.disabled = false;
-//           // console.log(el);
-//           console.log(event.target);
-//         });
-//       });
-//     }
-//   })
-// })
-
-// function mergeInputBtn (arr1, arr2) {
-//   console.log(arr1);
-//   console.log(arr2);
-
-//   arr1[0].addEventListener('input', (event) => {
-//     console.log(event.target);
-
-//     arr2[0, 1].disabled = false
-//   })
-// };
-// mergeInputBtn(arrInput, arrBtn);
 
 
 
@@ -123,9 +76,9 @@ let addEventInput = (elem, ok, clean, conditions) => {
   });
 };
 
-addEventInput(rgbInput, btnAcceptRgbInput, btnCleanRgbInput, rgbConditions);
-addEventInput(rgbaInput, btnAcceptRgbaInput, btnCleanRgbaInput, rgbaConditions);
-addEventInput(hexInput, btnAcceptHexInput, btnCleanHexInput, hexConditions);
+addEventInput(rgbInput, btnAcceptInput, btnCleanInput, rgbConditions);
+addEventInput(rgbaInput, btnAcceptInput, btnCleanInput, rgbaConditions);
+addEventInput(hexInput, btnAcceptInput, btnCleanInput, hexConditions);
 
 
 
