@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container {
+  width: 400px;
+  height: 200px;
+
+  border: 2px solid black;
+  border-radius: 20px;
+}
