@@ -1,0 +1,16 @@
+button {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  
+  background-color: rgba(0, 0, 255, 0.496);
+  padding: 10px 20px;
+  margin-right: 10px;
+
+  transition: all ease .3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.688);
+}
