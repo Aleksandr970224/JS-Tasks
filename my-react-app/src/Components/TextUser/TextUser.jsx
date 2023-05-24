@@ -1,0 +1,1 @@
+export const TextUser = (props) => <p>{props.children}</p>
