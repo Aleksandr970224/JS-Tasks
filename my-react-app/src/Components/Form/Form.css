@@ -1,0 +1,63 @@
+.form-add-user {
+  border: 2px solid rgb(23, 23, 230);
+  border-radius: 20px;
+  background-color: rgba(172, 255, 47, 0.54);
+
+  height: 140px;
+  width: 40%;
+  padding: 15px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-add-user button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  
+  background-color: rgba(43, 0, 255, 0.59);
+  transition: all ease .3s;
+
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-add-user button:hover {
+  background-color: rgba(10, 2, 249, 0.842);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.wrapper-input-add-user {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.wrapper-input-add-user p {
+  display: inline-block;
+  padding-right: 5px;
+  margin: 0;
+}
+
+.wrapper-input-add-user label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+}
+
+.wrapper-input-add-user label input {
+  border: 2px solid rgb(23, 23, 230);
+  border-radius: 4px;
+  outline: none;
+
+  padding: 5px;
+}

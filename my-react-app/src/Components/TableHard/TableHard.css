@@ -1,0 +1,19 @@
+table {
+  margin-bottom: 50px;
+}
+
+.wrapper-row-user {
+  width: 900px;
+  height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+
+.wrapper-row-user p {
+  margin: 0;
+  margin-bottom: 3px;
+  
+  font-weight: bold;
+}
