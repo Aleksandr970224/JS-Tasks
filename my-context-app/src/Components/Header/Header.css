@@ -1,0 +1,23 @@
+header {
+  padding: 30px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  margin-left: 45%;
+}
+
+header ul li {
+  display: inline-block;
+
+  margin-left: 20px;
+}
+
+header ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+}
