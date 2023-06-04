@@ -1,0 +1,12 @@
+.wrapper h1 {
+  text-align: center;
+}
+
+.wrapper-team {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px
+}
