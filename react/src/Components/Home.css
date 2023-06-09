@@ -1,0 +1,19 @@
+.wrapper-posts {
+  display: block;
+  width: 50%;
+  padding: 15px;
+
+  border: 2px solid blue;
+  border-radius: 20px;
+}
+
+.wrapper-posts p:first-of-type {
+  font-size: 20px;
+
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.wrapper-posts h3 {
+  display: inline-block;
+}
